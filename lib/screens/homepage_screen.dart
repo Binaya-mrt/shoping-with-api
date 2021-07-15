@@ -26,9 +26,10 @@ class HomepageScreen extends StatelessWidget {
           } else {
             return Obx(() => GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10),
+                    childAspectRatio: 2 / 4,
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10,
+                  ),
                   itemBuilder: (context, index) {
                     return ProductDetail(controller.productList[index]);
                   },
